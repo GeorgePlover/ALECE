@@ -136,3 +136,5 @@ cmake-build-debug
 build
 data
 src/debug
+
+postgresql*
