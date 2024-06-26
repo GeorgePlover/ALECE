@@ -65,7 +65,7 @@ You can also conduct both replacements by running the following scripts.
 ```bash
 - In data/STATS/workload/static, you will find two sql files: train_queries.sql and test_queries.sql.
 - python benchmark/sub_queries_generator.py --data STATS --wl_data_type train (for train_queries.sql) 
-- python benchmark/sub_queries_generator.py --data STATS --wl_data_type train (for test_queries.sql)
+- python benchmark/sub_queries_generator.py --data STATS --wl_data_type test (for test_queries.sql)
 - We have provided three dynamic workloads: Insert-heavy, Update-heavy and Dist-shift. 
 - Each workload is the mix of the training (sub-)queries, testing (sub-)queries and insert/delete/update statements.
 - You can also randomly mix the training/testing (sub-)queries with data manipulation statements to build your own dynamic workload.
@@ -107,7 +107,7 @@ Then, in the directory `ALECE/exp/STATS/e2e`, you will find a file `ALECE_STATS_
 
 ```bash
 - cd ALECE/src;
-- python train.py --model ALECE --data STATS --wl_type ins_heavy --test_wl_type dist_shit
+- python train.py --model ALECE --data STATS --wl_type ins_heavy --test_wl_type dist_shift
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Then, in the directory `ALECE/exp/STATS/e2e`, you will find a file `ALECE_STATS_ins_dist.txt` which covers the estimated cardinalities of the testing sub-queries in the Dist-shift workload.
